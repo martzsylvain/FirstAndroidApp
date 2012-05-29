@@ -56,7 +56,6 @@ public class MyActivity extends Activity implements View.OnClickListener {
                 activitiesName.push(act.getClass().getName());
             }
 
-            Log.v("trololo", "number of activities name : " + activitiesName.size());
           //  if (mAdapter == null)
                 mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, activitiesName);
             if (mListView != null)
