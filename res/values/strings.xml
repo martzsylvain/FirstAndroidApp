@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FirstAndroidApp</string>
+
+    <string name="SingleTop">Single Top Activity</string>
+    <string name="SingleTask">Single Task Activity</string>
+    <string name="SingleInstance">Single Instance Activity</string>
+    <string name="Quit">Quit</string>
+
 </resources>

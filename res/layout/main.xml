@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <TextView
-        android:text="Hello"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        />
-    <Button
-        android:id="@+id/button_1"
-        android:text="Activity"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/button_2"
-        android:text="Service"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/button_3"
-        android:text="Content provider"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/button_4"
-        android:text="Broadcast receivers"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/button_5"
-        android:text="Quit"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
 
+    <TextView android:id="@android:id/title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Activity Stack"
+              android:layout_centerHorizontal="true"
+            />
+
+    <ListView android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:background="#ff0000"
+        android:layout_below="@id/list"
+        android:layout_height="wrap_content">
+    </ListView>
+    <LinearLayout android:id="@+id/linear"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignParentBottom="true"
+                  android:background="@android:color/background_dark">
+
+        <Button android:layout_weight="1"
+                android:id="@+id/button_1"
+                android:text="@string/SingleTop"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content" />
+
+        <Button android:layout_weight="1"
+                android:id="@+id/button_2"
+                android:text="@string/SingleTask"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"/>
+
+        <Button android:layout_weight="1"
+                android:id="@+id/button_3"
+                android:text="@string/SingleInstance"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"/>
+
+        <Button android:layout_weight="0"
+                android:id="@+id/button_4"
+                android:text="@string/Quit"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
